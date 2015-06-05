@@ -20,7 +20,7 @@
 	                    <div class="col-lg-12">
 	                        <form role="form">
 	                            <div class="form-group">
-	                                <label>Mesa</label>
+	                                <label>Pedido</label>
 	                                <label class="radio-inline">
 	                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked="">1
 	                                </label>
@@ -31,7 +31,8 @@
 	                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3">3
 	                                </label>
 	                            </div>
-	                             <a href="fazerPedido.jsp" class="btn btn-default">Iniciar Pedido</a>
+	                            <button type="submit" class="btn btn-default">Fechar Pedido</button>
+	                            <a href="#" class="btn btn-default">Fechar Conta</a>
 	                        </form>
 	                    </div>
 					</div>
