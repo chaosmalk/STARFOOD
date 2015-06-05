@@ -13,26 +13,32 @@
 		<div class="col-lg-12">
 	        <div class="panel panel-default">
 	            <div class="panel-heading">
-	                Basic Form Elements
+	                Aproveite nosso cardápio especial!
 	            </div>
 	            <div class="panel-body">
 	                <div class="row">
 	                    <div class="col-lg-12">
 	                        <form role="form">
 	                            <div class="form-group">
-	                                <label>Pedido</label>
-	                                <label class="radio-inline">
-	                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked="">1
-	                                </label>
-	                                <label class="radio-inline">
-	                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2">2
-	                                </label>
-	                                <label class="radio-inline">
-	                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3">3
-	                                </label>
-	                            </div>
-	                            <button type="submit" class="btn btn-default">Fechar Pedido</button>
-	                            <a href="#" class="btn btn-default">Fechar Conta</a>
+                                            <label>Bebidas</label>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">Refrigerante
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">Suco
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">Cerveja
+                                                </label>
+                                            </div>
+                                        </div>
+	                            <button type="submit" class="btn btn-default">Enviar Pedido</button>
+	                            <a href="caixa.jsp" class="btn btn-default">Fechar Conta</a>
 	                        </form>
 	                    </div>
 					</div>
