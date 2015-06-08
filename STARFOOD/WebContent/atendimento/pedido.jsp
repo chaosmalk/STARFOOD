@@ -31,7 +31,7 @@
 	                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3">3
 	                                </label>
 	                            </div>
-	                             <a href="fazerPedido.jsp" class="btn btn-default">Iniciar Pedido</a>
+	                             <a href="Atendimento?acao=abrirPedido" class="btn btn-default">Iniciar Pedido</a>
 	                        </form>
 	                    </div>
 					</div>
