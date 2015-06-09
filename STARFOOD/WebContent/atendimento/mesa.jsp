@@ -18,7 +18,7 @@
 	            <div class="panel-body">
 	                <div class="row">
 	                    <div class="col-lg-12">
-	                        <form role="form" action="Atendimento?acao=abrirPedido" method="post">
+	                        <form role="form" action="Atendimento?acao=abrirMesa" method="post">
 	                            <div class="form-group">
 	                                <label>Mesa</label>
 	                                <label class="radio-inline">
@@ -32,6 +32,7 @@
 	                                </label>
 	                            </div>
 	                             <input type="submit" class="btn btn-default" value="Iniciar Pedido"/>
+	                             <a href="fazerPedido.jsp" class="btn btn-default">Iniciar Pedido</a>
 	                        </form>
 	                    </div>
 					</div>
