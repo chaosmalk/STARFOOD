@@ -27,8 +27,18 @@ public class AtendimentoServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String acao = request.getParameter("acao");
+		
 		if(acao.equals("abrirPedido")){
+			System.out.println(request.getParameter("optionsRadiosInline"));
+			System.out.println(request.getParameter("acao"));
+			
 			try {
 //				FuncionarioDao dao = new FuncionarioDao();
 //				Funcionario funcionario = new Funcionario();
@@ -42,13 +52,6 @@ public class AtendimentoServlet extends HttpServlet {
 			}
 			response.sendRedirect("atendimento/fazerPedido.jsp");
 		}
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 	}
 
 }

@@ -18,20 +18,20 @@
 	            <div class="panel-body">
 	                <div class="row">
 	                    <div class="col-lg-12">
-	                        <form role="form">
+	                        <form role="form" action="Atendimento?acao=abrirPedido" method="post">
 	                            <div class="form-group">
 	                                <label>Mesa</label>
 	                                <label class="radio-inline">
-	                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked="">1
+	                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="1" checked="">1
 	                                </label>
 	                                <label class="radio-inline">
-	                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2">2
+	                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="2">2
 	                                </label>
 	                                <label class="radio-inline">
-	                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3">3
+	                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="3">3
 	                                </label>
 	                            </div>
-	                             <a href="Atendimento?acao=abrirPedido" class="btn btn-default">Iniciar Pedido</a>
+	                             <input type="submit" class="btn btn-default" value="Iniciar Pedido"/>
 	                        </form>
 	                    </div>
 					</div>
