@@ -10,6 +10,10 @@
 	        <li>
 	            <a href="${pageContext.request.contextPath}/atendimento/caixa.jsp"><i class="fa fa-edit fa-fw"></i> Caixa</a>
 	        </li>
+	        <li>
+	            <a href="${pageContext.request.contextPath}/adm/pag_adm.jsp"><i class="fa fa-edit fa-fw"></i> Administrador</a>
+	        </li>
+	        
 	    </ul>
 	</div>
 </div>

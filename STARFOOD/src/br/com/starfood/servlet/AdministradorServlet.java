@@ -30,6 +30,12 @@ public class AdministradorServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String acao = request.getParameter("acao");
 		
 		if(acao.equals("cadastrarFuncionario")){
@@ -37,22 +43,24 @@ public class AdministradorServlet extends HttpServlet {
 				FuncionarioDao dao = new FuncionarioDao();
 				Funcionario funcionario = new Funcionario();
 				
-				funcionario.setId(1);
-				funcionario.setNomeFuncionario(request.getParameter("nome"));
+				funcionario.setNomeFuncionario(request.getParameter("nomeFuncionario"));
+				funcionario.setcpf(Integer.parseInt(request.getParameter("cpf")));
+				funcionario.setEmailFuncionario(request.getParameter("email"));
+				funcionario.setEnderecoFuncionario(request.getParameter("endereco"));
+				funcionario.setTelFuncionario(Integer.parseInt(request.getParameter("telefone")));
+				funcionario.setcelFuncionario(Integer.parseInt(request.getParameter("celular")));
+				funcionario.setrg(Integer.parseInt(request.getParameter("rg")));
+				funcionario.setpassword(request.getParameter("password"));
 				
 				dao.create(funcionario);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			response.sendRedirect("atendimento/fazerPedido.jsp");
+			response.sendRedirect("adm/pag_adm.jsp");
+		
+		}else if(acao.equals("cadastrarCargo")){
+			
 		}
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 	}
 
 }
