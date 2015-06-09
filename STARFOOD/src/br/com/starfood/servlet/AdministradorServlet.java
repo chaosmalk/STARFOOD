@@ -8,17 +8,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.starfood.persistence.FuncionarioDao;
+import br.com.startfood.entidade.Funcionario;
+
 /**
- * Servlet implementation class PedidoServlet
+ * Servlet implementation class AdministradorServlet
  */
-@WebServlet("/Atendimento")
-public class AtendimentoServlet extends HttpServlet {
+@WebServlet("/Administrador")
+public class AdministradorServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AtendimentoServlet() {
+    public AdministradorServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,15 +31,16 @@ public class AtendimentoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String acao = request.getParameter("acao");
-		if(acao.equals("abrirPedido")){
+		
+		if(acao.equals("cadastrarFuncionario")){
 			try {
-//				FuncionarioDao dao = new FuncionarioDao();
-//				Funcionario funcionario = new Funcionario();
-//				
-//				funcionario.setId(1);
-//				funcionario.setNomeFuncionario("Teste");
-//				
-//				dao.create(funcionario);
+				FuncionarioDao dao = new FuncionarioDao();
+				Funcionario funcionario = new Funcionario();
+				
+				funcionario.setId(1);
+				funcionario.setNomeFuncionario(request.getParameter("nome"));
+				
+				dao.create(funcionario);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
