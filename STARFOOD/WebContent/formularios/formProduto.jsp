@@ -24,19 +24,20 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form role="form">
+                                    <form role="form" action="${pageContext.request.contextPath}/Administrador" method="post">
+                                        <input type="hidden" name="acao" value="cadastrarFuncionario"/>
                                         <div class="form-group">
                                             <label>Id do Produto</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="idProduto">
                                         </div>
                                          <div class="form-group">
                                             <label>Descrição do Produto</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="descProduto">
                                          
                                         </div>
                                         <div class="form-group">
                                             <label>Quantidade</label>
-                                            <select class="form-control">
+                                            <select class="form-control" name="quantidade">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -46,50 +47,50 @@
                                         </div>
                                          <div class="form-group">
                                             <label>Volumetria</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="volumetria">
                                         
                                         </div>
                                          <div class="form-group">
                                             <label>Id do Fornecedor	</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="idFornecedor">
                                         
                                         </div>
                                          <div class="form-group">
                                             <label>Data da Compra</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="dataCompra">
                                        
                                         </div>
                                          <div class="form-group">
                                             <label>Data de Validade</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="dataValidade">
                                            
                                         </div>
                                          <div class="form-group">
                                             <label>Valor da Compra</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="valorCompra">
                                         
                                         </div>
                                          <div class="form-group">
                                             <label>Valor da Venda</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="valorVenda">
                                         
                                         </div>
                                          <div class="form-group">
                                             <label>Barra do Produto</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="barraProduto">
                                          
                                         </div>
                                          <div class="form-group">
                                             <label>Barra Interna</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="barraInterna">
                                        
                                         </div>
                                          <div class="form-group">
                                             <label>Copa da Cozinha</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="copaCozinha">
                                        
                                         </div>
-                                        <button type="submit" class="btn btn-default">Incluir</button>
+                                        <input type="submit" class="btn btn-default" value="Incluir"/>
                                         <button type="reset" class="btn btn-default">Alterar</button>
                                         <button type="submit" class="btn btn-default">Excluir</button>
                                         <button type="reset" class="btn btn-default">Pesquisar</button>

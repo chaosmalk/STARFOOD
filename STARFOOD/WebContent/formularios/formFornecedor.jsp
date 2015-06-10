@@ -24,59 +24,59 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form role="form">
+                                    <form role="form" action="${pageContext.request.contextPath}/Administrador" method="post">
+                                    <input type="hidden" name="acao" value="cadastrarFornecedor"/>
                                         <div class="form-group">
                                             <label>Id do Fornecedor</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="idFornecedor">
                                         </div>
                                          <div class="form-group">
                                             <label>Razão Social</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="razaoSocial">
                                          
                                         </div>
                                     
                                          <div class="form-group">
                                             <label>Data de Cadastro</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="dataCadastro">
                                         
                                         </div>
                                          <div class="form-group">
                                             <label>Endereço	</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="endereco">
                                         
                                         </div>
                                          <div class="form-group">
                                             <label>Telefone</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="telefone">
                                        
                                         </div>
                                          <div class="form-group">
                                             <label>Celular</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="celular">
                                            
                                         </div>
                                          <div class="form-group">
                                             <label>E-mail</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="email">
                                         
                                         </div>
                                          <div class="form-group">
                                             <label>CNPJ</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="cnpj">
                                         
                                         </div>
                                          <div class="form-group">
                                             <label>Inscrição Estadual</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="inscricaoEstadual">
                                          
                                         </div>
                                          <div class="form-group">
                                             <label>Observações</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="observacoes">
                                        
                                         </div>
-                                         
-                                        <button type="submit" class="btn btn-default">Incluir</button>
+                                        <input type="submit" class="btn btn-default" value="Incluir"/>
                                         <button type="reset" class="btn btn-default">Alterar</button>
                                         <button type="submit" class="btn btn-default">Excluir</button>
                                         <button type="reset" class="btn btn-default">Pesquisar</button>

@@ -24,23 +24,23 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form role="form">
+                                    <form role="form" action="${pageContext.request.contextPath}/Administrador" method="post">
+                                    <input type="hidden" name="acao" value="cadastrarFormaPagamento"/>
                                         <div class="form-group">
                                             <label>Id da Forma de Pagamento</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="idFormaPagamento">
                                         </div>
                                          <div class="form-group">
                                             <label>Descrição</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="descricao">
                                          
                                         </div>
                                          <div class="form-group">
                                             <label>Taxa</label>
-                                            <input class="form-control">
+                                            <input class="form-control" name="taxa">
                                          
                                         </div>
-                                                                                  
-                                        <button type="submit" class="btn btn-default">Incluir</button>
+                                        <input type="submit" class="btn btn-default" value="Incluir"/>                                          
                                         <button type="reset" class="btn btn-default">Alterar</button>
                                         <button type="submit" class="btn btn-default">Excluir</button>
                                         <button type="reset" class="btn btn-default">Pesquisar</button>
