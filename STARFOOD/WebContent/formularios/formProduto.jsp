@@ -25,7 +25,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <form role="form" action="${pageContext.request.contextPath}/Administrador" method="post">
-                                        <input type="hidden" name="acao" value="cadastrarFuncionario"/>
+                                        <input type="hidden" name="acao" value="cadastrarProduto"/>
                                         <div class="form-group">
                                             <label>Id do Produto</label>
                                             <input class="form-control" name="idProduto">
