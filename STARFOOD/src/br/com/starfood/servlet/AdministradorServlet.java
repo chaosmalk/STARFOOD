@@ -64,8 +64,7 @@ public class AdministradorServlet extends HttpServlet {
 				CargoDao dao = new CargoDao();
 				Cargo cargo = new Cargo();
 				
-				cargo.setIdFuncao(Integer.parseInt(request.getParameter("idFuncao")));
-				cargo.setDescricao(request.getParameter("descricao"));
+				cargo.setdescricao(request.getParameter("descricao"));
 				
 				
 				dao.create(cargo);
@@ -81,9 +80,8 @@ public class AdministradorServlet extends HttpServlet {
 				PagamentoDao dao = new PagamentoDao();
 				Pagamento pagamento = new Pagamento();
 				
-				pagamento.setIdFormaPagamento(Integer.parseInt(request.getParameter("idFormaPagamento")));
-				pagamento.setDescricao(request.getParameter("descricao"));
-				pagamento.setIdFormaPagamento(Integer.parseInt(request.getParameter("taxa")));
+				pagamento.setdescricao(request.getParameter("descricao"));
+				pagamento.settaxa(Integer.parseInt(request.getParameter("taxa")));
 				
 				dao.create(pagamento);
 			} catch (Exception e) {
@@ -98,16 +96,15 @@ public class AdministradorServlet extends HttpServlet {
 				FornecedorDao dao = new FornecedorDao();
 				Fornecedor fornecedor = new Fornecedor();
 				
-				fornecedor.setIdFornecedor(Integer.parseInt(request.getParameter("idFornecedor")));
-				fornecedor.setRazaoSocial(request.getParameter("razaoSocial"));
+				fornecedor.setrazaoSocial(request.getParameter("razaoSocial"));
 // não sei como colocar data	fornecedor.setIdFormaPagamento(Integer.parseInt(request.getParameter("dataCadastro")));
-				fornecedor.setEndereco(request.getParameter("endereco"));
-				fornecedor.setTelFornecedor(Integer.parseInt(request.getParameter("telefone")));
-				fornecedor.setCelFornecedor(Integer.parseInt(request.getParameter("celular")));
-				fornecedor.setEmailFoenecedor(request.getParameter("email"));
-				fornecedor.setCnpj(Integer.parseInt(request.getParameter("cnpj")));
-				fornecedor.setInscricaoEstadual(Integer.parseInt(request.getParameter("inscricaoEstadual")));
-				fornecedor.setObservacoes(request.getParameter("observacoes"));
+				fornecedor.setendereco(request.getParameter("endereco"));
+				fornecedor.settelefone(Integer.parseInt(request.getParameter("telefone")));
+				fornecedor.setcelular(Integer.parseInt(request.getParameter("celular")));
+				fornecedor.setemail(request.getParameter("email"));
+				fornecedor.setcnpj(Integer.parseInt(request.getParameter("cnpj")));
+				fornecedor.setinscricaoEstadual(Integer.parseInt(request.getParameter("inscricaoEstadual")));
+				fornecedor.setobservacoes(request.getParameter("observacoes"));
 				
 				dao.create(fornecedor);
 			} catch (Exception e) {
@@ -122,15 +119,14 @@ public class AdministradorServlet extends HttpServlet {
 				ProdutoDao dao = new ProdutoDao();
 				Produto produto = new Produto();
 				
-				produto.setIdProduto(Integer.parseInt(request.getParameter("idProduto")));
-				produto.setDescProduto(request.getParameter("descProduto"));
-				produto.setQuantidade(Integer.parseInt(request.getParameter("quantidade")));
-				produto.setVolumetria(Integer.parseInt(request.getParameter("volumetria")));
-				produto.setIdFornecedor(Integer.parseInt(request.getParameter("idFornecedor")));
-				produto.setValorCompra(Integer.parseInt(request.getParameter("valorCompra")));
-				produto.setValorCompra(Integer.parseInt(request.getParameter("valorVenda")));
-				produto.setBarraProduto(Integer.parseInt(request.getParameter("barraProduto")));
-				produto.setBarraInterna(Integer.parseInt(request.getParameter("barraInterna")));
+				produto.setdescProduto(request.getParameter("descProduto"));
+				produto.setquantidade(Integer.parseInt(request.getParameter("quantidade")));
+				produto.setvolumetria(Integer.parseInt(request.getParameter("volumetria")));
+				produto.setidFornecedor(Integer.parseInt(request.getParameter("idFornecedor")));
+				produto.setvalorCompra(Integer.parseInt(request.getParameter("valorCompra")));
+				produto.setvalorVenda(Integer.parseInt(request.getParameter("valorVenda")));
+				produto.setbarraProduto(Integer.parseInt(request.getParameter("barraProduto")));
+				produto.setbarraInterna(Integer.parseInt(request.getParameter("barraInterna")));
 				
 				
 				dao.create(produto);
@@ -146,9 +142,8 @@ public class AdministradorServlet extends HttpServlet {
 					MesaDao dao = new MesaDao();
 					Mesa mesa = new Mesa();
 					
-					mesa.setIdMesa(Integer.parseInt(request.getParameter("idMesa")));
-					mesa.setDescricao(request.getParameter("descricao"));
-					mesa.setStatus(request.getParameter("status"));
+					mesa.setdescricao(request.getParameter("descricao"));
+					mesa.setstatus(request.getParameter("status"));
 										
 					
 					dao.create(mesa);
