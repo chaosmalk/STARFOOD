@@ -36,6 +36,13 @@ public class FuncionarioDao extends Dao {
 		while(rs.next()){
 			Funcionario funcionario = new Funcionario();
 			funcionario.setNomeFuncionario(rs.getString("Nome_Funcionario"));
+			funcionario.setEnderecoFuncionario(rs.getString("Endereco_Func"));
+			funcionario.setTelFuncionario(rs.getInt("Tel_Funcionario"));
+			funcionario.setcelFuncionario(rs.getInt("Cel_Funcionario"));
+			funcionario.setEmailFuncionario(rs.getString("Email_Funcionario"));
+			funcionario.setpassword(rs.getString("Password"));
+			funcionario.setrg(rs.getInt("RG"));
+			funcionario.setcpf(rs.getInt("CPF"));
 			
 			lista.add(funcionario);
 		}
