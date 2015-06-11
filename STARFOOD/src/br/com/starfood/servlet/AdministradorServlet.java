@@ -1,6 +1,7 @@
 package br.com.starfood.servlet;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,10 +12,15 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.starfood.persistence.CargoDao;
 import br.com.starfood.persistence.FornecedorDao;
 import br.com.starfood.persistence.FuncionarioDao;
+import br.com.starfood.persistence.MesaDao;
 import br.com.starfood.persistence.PagamentoDao;
+import br.com.starfood.persistence.ProdutoDao;
+import br.com.startfood.entidade.FormaPagamento;
 import br.com.startfood.entidade.Fornecedor;
+import br.com.startfood.entidade.Funcao;
 import br.com.startfood.entidade.Funcionario;
 import br.com.startfood.entidade.Produto;
+import br.com.startfood.entidade.Solicitante;
 
 /**
  * Servlet implementation class AdministradorServlet
@@ -43,6 +49,7 @@ public class AdministradorServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String acao = request.getParameter("acao");
 		
+		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");  
 		if(acao.equals("cadastrarFuncionario")){
 			try {
 				FuncionarioDao dao = new FuncionarioDao();
@@ -56,6 +63,8 @@ public class AdministradorServlet extends HttpServlet {
 				funcionario.setcelFuncionario(Integer.parseInt(request.getParameter("celular")));
 				funcionario.setrg(Integer.parseInt(request.getParameter("rg")));
 				funcionario.setpassword(request.getParameter("password"));
+				java.sql.Date dataAdmissao = new java.sql.Date(format.parse(request.getParameter("dataAdmissao")).getTime());
+				funcionario.setdataEntrada(dataAdmissao);
 				
 				dao.create(funcionario);
 			} catch (Exception e) {
@@ -67,7 +76,7 @@ public class AdministradorServlet extends HttpServlet {
 			
 			try {
 				CargoDao dao = new CargoDao();
-				Cargo cargo = new Cargo();
+				Funcao cargo = new Funcao();
 				
 				cargo.setdescricao(request.getParameter("descricao"));
 				
@@ -83,7 +92,7 @@ public class AdministradorServlet extends HttpServlet {
 			
 			try {
 				PagamentoDao dao = new PagamentoDao();
-				Pagamento pagamento = new Pagamento();
+				FormaPagamento pagamento = new FormaPagamento();
 				
 				pagamento.setdescricao(request.getParameter("descricao"));
 				pagamento.settaxa(Integer.parseInt(request.getParameter("taxa")));
@@ -102,7 +111,8 @@ public class AdministradorServlet extends HttpServlet {
 				Fornecedor fornecedor = new Fornecedor();
 				
 				fornecedor.setrazaoSocial(request.getParameter("razaoSocial"));
-// não sei como colocar data	fornecedor.setIdFormaPagamento(Integer.parseInt(request.getParameter("dataCadastro")));
+				java.sql.Date dataCadastro = new java.sql.Date(format.parse(request.getParameter("dataCadastro")).getTime());
+				fornecedor.setdataCadastro(dataCadastro);
 				fornecedor.setenderecoFornecedor(request.getParameter("endereco"));
 				fornecedor.settelFornecedor(Integer.parseInt(request.getParameter("telefone")));
 				fornecedor.setcelFornecedor(Integer.parseInt(request.getParameter("celular")));
@@ -129,7 +139,10 @@ public class AdministradorServlet extends HttpServlet {
 				produto.setidFornecedor(Integer.parseInt(request.getParameter("idFornecedor")));
 				produto.setvalorCompra(Integer.parseInt(request.getParameter("valorCompra")));
 				produto.setvalorVenda(Integer.parseInt(request.getParameter("valorVenda")));
-				
+				java.sql.Date dataCompra = new java.sql.Date(format.parse(request.getParameter("dataCompra")).getTime());
+				produto.setdataCompra(dataCompra);
+				java.sql.Date dataValidade = new java.sql.Date(format.parse(request.getParameter("dataValidade")).getTime());
+				produto.setdataValidade(dataValidade);
 				
 				
 				dao.create(produto);
@@ -143,10 +156,11 @@ public class AdministradorServlet extends HttpServlet {
 				
 				try {
 					MesaDao dao = new MesaDao();
-					Mesa mesa = new Mesa();
+					Solicitante mesa = new Solicitante();
 					
 					mesa.setdescricao(request.getParameter("descricao"));
 					mesa.setstatus(request.getParameter("status"));
+				
 										
 					
 					dao.create(mesa);
@@ -158,4 +172,4 @@ public class AdministradorServlet extends HttpServlet {
 		}
 	}
 
-}
+

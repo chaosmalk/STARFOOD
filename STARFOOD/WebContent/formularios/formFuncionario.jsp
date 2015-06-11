@@ -28,12 +28,12 @@
                                     	<input type="hidden" name="acao" value="cadastrarFuncionario"/>
                                          <div class="form-group">
                                             <label>Nome</label>
-                                            <input class="form-control" name="nomeFuncionario">
+                                            <input class="form-control" name="nomeFuncionario" required="">
                                          
                                         </div>
                                         <div class="form-group">
                                             <label>Id da Função</label>
-                                            <select class="form-control" name="idFuncao">
+                                            <select class="form-control" name="idFuncao"  required="">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -43,52 +43,52 @@
                                         </div>
                                          <div class="form-group">
                                             <label>Endereço</label>
-                                            <input class="form-control" name="endereco">
+                                            <input class="form-control" name="endereco"  required="">
                                         
                                         </div>
                                          <div class="form-group">
                                             <label>Telefone	</label>
-                                            <input class="form-control" name="telefone">
+                                            <input class="form-control" name="telefone"  required="">
                                         
                                         </div>
                                          <div class="form-group">
-                                            <label>Celular</label>
-                                            <input class="form-control" name="celular">
+                                            <label>Celular</label> 
+                                            <input class="form-control" name="celular"  required="">
                                        
                                         </div>
                                          <div class="form-group">
                                             <label>E-mail</label>
-                                            <input class="form-control" name="email">
+                                            <input class="form-control" name="email"  required="">
                                            
                                         </div>
                                          <div class="form-group">
                                             <label>Data de admissão</label>
-                                            <input class="form-control" name="dataAdmissao">
+                                            <input class="form-control" name="dataAdmissao"  required="">
                                         
                                         </div>
                                          <div class="form-group">
                                             <label>Data de demissão</label>
-                                            <input class="form-control" name="dataDemissao">
+                                            <input class="form-control" name="dataDemissao"  required="">
                                         
                                         </div>
                                          <div class="form-group">
                                             <label>Senha</label>
-                                            <input class="form-control" type="password" name="senha">
+                                            <input class="form-control" type="password" name="senha"  required="">
                                          
                                         </div>
                                          <div class="form-group">
                                             <label>RG</label>
-                                            <input class="form-control" name="rg">
+                                            <input class="form-control" name="rg"  required=""> 
                                        
                                         </div>
                                          <div class="form-group">
                                             <label>CPF</label>
-                                            <input class="form-control" name="cpf">
+                                            <input class="form-control" name="cpf"  required="">
                                        
                                         </div>
                                         <div class="form-group">
                                             <label>Data de Nascimento</label>
-                                            <input class="form-control" name="dataNascimento">
+                                            <input class="form-control" name="dataNascimento"  required="">
                                        
                                         </div>
                                         <input type="submit" class="btn btn-default" value="Incluir"/>
