@@ -1,5 +1,9 @@
 package br.com.starfood.persistence;
 
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.startfood.entidade.Funcionario;
 
 public class FuncionarioDao extends Dao {  
@@ -20,4 +24,24 @@ public class FuncionarioDao extends Dao {
 		stmt.execute();        
 		close();        
 	}   
+	
+	public List<Funcionario> findAll() throws Exception{  
+		open();  
+		statement = con.createStatement();
+		
+		String sql = "SELECT Nome_Funcionario, Endereco_Func, Tel_Funcionario, Cel_Funcionario, Email_Funcionario, Password, RG, CPF FROM tb_funcionario";
+		ResultSet rs = statement.executeQuery(sql);
+
+		List<Funcionario> lista = new ArrayList<Funcionario>();
+		while(rs.next()){
+			Funcionario funcionario = new Funcionario();
+			funcionario.setNomeFuncionario(rs.getString("Nome_Funcionario"));
+			
+			lista.add(funcionario);
+		}
+		rs.close();
+		close(); 
+		return lista;
+	}
+	
 }

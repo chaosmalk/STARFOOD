@@ -52,6 +52,7 @@ public class AdministradorServlet extends HttpServlet {
 		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");  
 		if(acao.equals("cadastrarFuncionario")){
 			try {
+				
 				FuncionarioDao dao = new FuncionarioDao();
 				Funcionario funcionario = new Funcionario();
 				
@@ -66,6 +67,7 @@ public class AdministradorServlet extends HttpServlet {
 				java.sql.Date dataAdmissao = new java.sql.Date(format.parse(request.getParameter("dataAdmissao")).getTime());
 				funcionario.setdataEntrada(dataAdmissao);
 				
+				dao.findAll();
 				dao.create(funcionario);
 			} catch (Exception e) {
 				e.printStackTrace();
