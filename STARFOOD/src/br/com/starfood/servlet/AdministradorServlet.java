@@ -8,8 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.starfood.persistence.CargoDao;
+import br.com.starfood.persistence.FornecedorDao;
 import br.com.starfood.persistence.FuncionarioDao;
+import br.com.starfood.persistence.PagamentoDao;
+import br.com.startfood.entidade.Fornecedor;
 import br.com.startfood.entidade.Funcionario;
+import br.com.startfood.entidade.Produto;
 
 /**
  * Servlet implementation class AdministradorServlet
@@ -98,13 +103,13 @@ public class AdministradorServlet extends HttpServlet {
 				
 				fornecedor.setrazaoSocial(request.getParameter("razaoSocial"));
 // não sei como colocar data	fornecedor.setIdFormaPagamento(Integer.parseInt(request.getParameter("dataCadastro")));
-				fornecedor.setendereco(request.getParameter("endereco"));
-				fornecedor.settelefone(Integer.parseInt(request.getParameter("telefone")));
-				fornecedor.setcelular(Integer.parseInt(request.getParameter("celular")));
-				fornecedor.setemail(request.getParameter("email"));
+				fornecedor.setenderecoFornecedor(request.getParameter("endereco"));
+				fornecedor.settelFornecedor(Integer.parseInt(request.getParameter("telefone")));
+				fornecedor.setcelFornecedor(Integer.parseInt(request.getParameter("celular")));
+				fornecedor.setemailFornecedor(request.getParameter("email"));
 				fornecedor.setcnpj(Integer.parseInt(request.getParameter("cnpj")));
 				fornecedor.setinscricaoEstadual(Integer.parseInt(request.getParameter("inscricaoEstadual")));
-				fornecedor.setobservacoes(request.getParameter("observacoes"));
+				fornecedor.setobsFornecedor(request.getParameter("observacoes"));
 				
 				dao.create(fornecedor);
 			} catch (Exception e) {
@@ -120,13 +125,11 @@ public class AdministradorServlet extends HttpServlet {
 				Produto produto = new Produto();
 				
 				produto.setdescProduto(request.getParameter("descProduto"));
-				produto.setquantidade(Integer.parseInt(request.getParameter("quantidade")));
-				produto.setvolumetria(Integer.parseInt(request.getParameter("volumetria")));
+				produto.setqtdProduto(Integer.parseInt(request.getParameter("quantidade")));
 				produto.setidFornecedor(Integer.parseInt(request.getParameter("idFornecedor")));
 				produto.setvalorCompra(Integer.parseInt(request.getParameter("valorCompra")));
 				produto.setvalorVenda(Integer.parseInt(request.getParameter("valorVenda")));
-				produto.setbarraProduto(Integer.parseInt(request.getParameter("barraProduto")));
-				produto.setbarraInterna(Integer.parseInt(request.getParameter("barraInterna")));
+				
 				
 				
 				dao.create(produto);
