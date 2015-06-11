@@ -26,18 +26,14 @@
                                 <div class="col-lg-6">
                                     <form role="form" action="${pageContext.request.contextPath}/Administrador" method="post">
                                     <input type="hidden" name="acao" value="cadastrarFormaPagamento"/>
-                                        <div class="form-group">
-                                            <label>Id da Forma de Pagamento</label>
-                                            <input class="form-control" name="idFormaPagamento">
-                                        </div>
                                          <div class="form-group">
                                             <label>Descrição</label>
-                                            <input class="form-control" name="descricao">
+                                            <input class="form-control" name="descricao" required="">
                                          
                                         </div>
                                          <div class="form-group">
                                             <label>Taxa</label>
-                                            <input class="form-control" name="taxa">
+                                            <input class="form-control" name="taxa" required="">
                                          
                                         </div>
                                         <input type="submit" class="btn btn-default" value="Incluir"/>                                          

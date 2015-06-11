@@ -1,6 +1,7 @@
 package br.com.starfood.servlet;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,8 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.starfood.persistence.CargoDao;
 import br.com.starfood.persistence.FuncionarioDao;
+import br.com.starfood.persistence.PagamentoDao;
+import br.com.startfood.entidade.Fornecedor;
 import br.com.startfood.entidade.Funcionario;
+import br.com.startfood.entidade.Produto;
 
 /**
  * Servlet implementation class AdministradorServlet
@@ -38,6 +43,7 @@ public class AdministradorServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String acao = request.getParameter("acao");
 		
+		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");  
 		if(acao.equals("cadastrarFuncionario")){
 			try {
 				FuncionarioDao dao = new FuncionarioDao();
@@ -51,6 +57,8 @@ public class AdministradorServlet extends HttpServlet {
 				funcionario.setcelFuncionario(Integer.parseInt(request.getParameter("celular")));
 				funcionario.setrg(Integer.parseInt(request.getParameter("rg")));
 				funcionario.setpassword(request.getParameter("password"));
+				java.sql.Date dataAdmissao = new java.sql.Date(format.parse(request.getParameter("dataAdmissao")).getTime());
+				funcionario.setdataEntrada(dataAdmissao);
 				
 				dao.create(funcionario);
 			} catch (Exception e) {
@@ -97,7 +105,8 @@ public class AdministradorServlet extends HttpServlet {
 				Fornecedor fornecedor = new Fornecedor();
 				
 				fornecedor.setrazaoSocial(request.getParameter("razaoSocial"));
-// não sei como colocar data	fornecedor.setIdFormaPagamento(Integer.parseInt(request.getParameter("dataCadastro")));
+				java.sql.Date dataCadastro = new java.sql.Date(format.parse(request.getParameter("dataCadastro")).getTime());
+				fornecedor.setdataCadastro(dataCadastro);
 				fornecedor.setendereco(request.getParameter("endereco"));
 				fornecedor.settelefone(Integer.parseInt(request.getParameter("telefone")));
 				fornecedor.setcelular(Integer.parseInt(request.getParameter("celular")));

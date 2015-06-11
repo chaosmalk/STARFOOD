@@ -26,18 +26,14 @@
                                 <div class="col-lg-6">
                                     <form role="form" action="${pageContext.request.contextPath}/Administrador" method="post">
                                        <input type="hidden" name="acao" value="cadastrarMesa"/>
-                                        <div class="form-group">
-                                            <label>Id da Mesa (Solicitante)</label>
-                                            <input class="form-control" name="idMesa">
-                                        </div>
                                          <div class="form-group">
                                             <label>Descrição</label>
-                                            <input class="form-control" name="descricao">
+                                            <input class="form-control" name="descricao" required="">
                                          
                                         </div>
                                          <div class="form-group">
                                             <label>Status</label>
-                                            <input class="form-control" name="status">
+                                            <input class="form-control" name="status" required="">
                                          </div>
                                         <input type="submit" class="btn btn-default" value="Incluir"/>                                                                             
                                         <button type="reset" class="btn btn-default">Alterar</button>

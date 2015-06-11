@@ -26,13 +26,9 @@
                                 <div class="col-lg-6">
                                     <form role="form" action="${pageContext.request.contextPath}/Administrador" method="post">
                                         <input type="hidden" name="acao" value="cadastrarCargo"/>
-                                        <div class="form-group">
-                                            <label>Id da Função</label>
-                                            <input class="form-control" name="idFuncao">
-                                        </div>
                                          <div class="form-group">
                                             <label>Descrição</label>
-                                            <input class="form-control" name="descricao">
+                                            <input class="form-control" name="descricao" required="">
                                          
                                         </div>
                                     
