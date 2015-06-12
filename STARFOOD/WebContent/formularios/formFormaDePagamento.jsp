@@ -36,10 +36,10 @@
                                             <input class="form-control" name="taxa" required="">
                                          
                                         </div>
-                                        <input type="submit" class="btn btn-default" value="Incluir"/>                                          
+                                        <input type="submit" class="btn btn-default" value="Incluir"/> 
+                                        <a href="${pageContext.request.contextPath}/Administrador?acao=visualizarFormaPagamentos" class="btn btn-default">Pesquisar</a>                                         
                                         <button type="reset" class="btn btn-default">Alterar</button>
                                         <button type="submit" class="btn btn-default">Excluir</button>
-                                        <button type="reset" class="btn btn-default">Pesquisar</button>
                                         </div>
                                     </form>
                                 </div>

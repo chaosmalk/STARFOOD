@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Cadastro de Produtos</title>
+<title>Cadastro de Cargos</title>
 <%@include file='/template/header.jsp'%>
 </head>
 <body>
@@ -20,7 +20,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                           Lista de Produtos
+                           Lista de Cargos
                         </div>
                         <div class="panel-body">
                             <div class="row">
@@ -29,18 +29,12 @@
                                 		<thead>
                                 			<tr>
 	                                			<th>Descrição</th>
-	                                			<th>Quantidade</th>
-	                                			<th>Valor</th>
-	                                			<th>Data Validade</th>
 	                                		</tr>	
                                 		</thead>
                                 		<tbody>
-                                			<c:forEach items="${listProdutos}" var="p">
+                                			<c:forEach items="${listFuncao}" var="f">
 	                                			<tr>
-	                                				<td>${p.descProduto}</td>
-	                                				<td>${p.qtdProduto}</td>
-	                                				<td>${p.valorCompra}</td>
-	                                				<td>${p.dataValidade}</td>
+	                                				<td>${f.descricao}</td>
 	                                			</tr>
                                 			</c:forEach>
                                 		</tbody>

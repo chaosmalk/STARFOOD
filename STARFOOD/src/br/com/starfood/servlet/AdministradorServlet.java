@@ -75,6 +75,66 @@ public class AdministradorServlet extends HttpServlet {
 		    view.forward(request, response); 
 		}
 		
+			else if(acao.equals("visualizarFornecedores")){
+			
+			FornecedorDao dao = new FornecedorDao();
+			
+			try {
+				List<Fornecedor> listFornecedores = dao.findAll();
+				request.setAttribute("listFornecedores", listFornecedores);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			RequestDispatcher view = request.getRequestDispatcher("formularios/listaFornecedores.jsp");  
+		    view.forward(request, response); 
+		}
+		
+			else if(acao.equals("visualizarMesa")){
+				
+				MesaDao dao = new MesaDao();
+				
+				try {
+					List<Solicitante> listSolicitantes = dao.findAll();
+					request.setAttribute("listSolicitantes", listSolicitantes);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				
+				RequestDispatcher view = request.getRequestDispatcher("formularios/listaSolicitantes.jsp");  
+			    view.forward(request, response); 
+			}
+		
+			else if(acao.equals("visualizarFormaPagamentos")){
+				
+				PagamentoDao dao = new PagamentoDao();
+				
+				try {
+					List<FormaPagamento> listPagamentos = dao.findAll();
+					request.setAttribute("listPagamentos", listPagamentos);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				
+				RequestDispatcher view = request.getRequestDispatcher("formularios/listPagamentos.jsp");  
+			    view.forward(request, response); 
+			}
+		
+			else if(acao.equals("visualizarCargo")){
+				
+				CargoDao dao = new CargoDao();
+				
+				try {
+					List<Funcao> listCargos = dao.findAll();
+					request.setAttribute("listCargos", listCargos);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				
+				RequestDispatcher view = request.getRequestDispatcher("formularios/listCargos.jsp");  
+			    view.forward(request, response); 
+			}
+		
 	}
 
 	/**

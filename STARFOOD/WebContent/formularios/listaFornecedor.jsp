@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Cadastro de Produtos</title>
+<title>Cadastro de Fornecedor</title>
 <%@include file='/template/header.jsp'%>
 </head>
 <body>
@@ -20,7 +20,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                           Lista de Produtos
+                           Lista de Fornecedor
                         </div>
                         <div class="panel-body">
                             <div class="row">
@@ -28,19 +28,29 @@
                                 	<table class="table-bordered">
                                 		<thead>
                                 			<tr>
-	                                			<th>Descrição</th>
-	                                			<th>Quantidade</th>
-	                                			<th>Valor</th>
-	                                			<th>Data Validade</th>
+	                                			<th>Razão Social</th>
+	                                			<th>Data de Cadastro</th>
+	                                			<th>Endereço</th>
+	                                			<th>Telefone</th>
+	                                			<th>Celular</th>
+	                                			<th>E-mail</th>
+	                                			<th>CNPJ</th>
+	                                			<th>Inscrição Estadual</th>
+	                                			<th>Observações</th>
 	                                		</tr>	
                                 		</thead>
                                 		<tbody>
-                                			<c:forEach items="${listProdutos}" var="p">
+                                			<c:forEach items="${listFornecedor}" var="f">
 	                                			<tr>
-	                                				<td>${p.descProduto}</td>
-	                                				<td>${p.qtdProduto}</td>
-	                                				<td>${p.valorCompra}</td>
-	                                				<td>${p.dataValidade}</td>
+	                                				<td>${f.razaoSocial}</td>
+	                                				<td>${f.dataCadastro}</td>
+	                                				<td>${f.enderecoFornecedor}</td>
+	                                				<td>${f.telFornecedor}</td>
+	                                				<td>${f.celFornecedor}</td>
+	                                				<td>${f.emailFornecedor}</td>
+	                                				<td>${f.cnpj}</td>
+	                                				<td>${f.inscricaoEstadual}</td>
+	                                				<td>${f.obsFornecedor}</td>
 	                                			</tr>
                                 			</c:forEach>
                                 		</tbody>
