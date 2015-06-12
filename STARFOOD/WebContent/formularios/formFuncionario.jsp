@@ -92,6 +92,7 @@
                                        
                                         </div>
                                         <input type="submit" class="btn btn-default" value="Incluir"/>
+                                        <a href="${pageContext.request.contextPath}/Administrador?acao=visualizarFuncionarios" class="btn btn-default">Pesquisar</a>
                                     </form>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->

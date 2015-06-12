@@ -2,7 +2,9 @@ package br.com.starfood.servlet;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -41,6 +43,38 @@ public class AdministradorServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String acao = request.getParameter("acao");
+		
+		if(acao.equals("visualizarFuncionarios")){
+			
+			FuncionarioDao dao = new FuncionarioDao();
+			
+			try {
+				List<Funcionario> listFuncionarios = dao.findAll();
+				request.setAttribute("listFuncionarios", listFuncionarios);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			RequestDispatcher view = request.getRequestDispatcher("formularios/listaFuncionario.jsp");  
+		    view.forward(request, response); 
+		}
+		
+		else if(acao.equals("visualizarProdutos")){
+			
+			ProdutoDao dao = new ProdutoDao();
+			
+			try {
+				List<Produto> listProdutos = dao.findAll();
+				request.setAttribute("listProdutos", listProdutos);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			RequestDispatcher view = request.getRequestDispatcher("formularios/listaProduto.jsp");  
+		    view.forward(request, response); 
+		}
+		
 	}
 
 	/**
@@ -66,8 +100,7 @@ public class AdministradorServlet extends HttpServlet {
 				funcionario.setpassword(request.getParameter("password"));
 				java.sql.Date dataAdmissao = new java.sql.Date(format.parse(request.getParameter("dataAdmissao")).getTime());
 				funcionario.setdataEntrada(dataAdmissao);
-				
-				dao.findAll();
+			
 				dao.create(funcionario);
 			} catch (Exception e) {
 				e.printStackTrace();

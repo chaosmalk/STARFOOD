@@ -32,8 +32,8 @@ public class MesaDao extends Dao {
 		List<Solicitante> lista = new ArrayList<Solicitante>();
 		while(rs.next()){
 			Solicitante solicitante = new Solicitante();
-			solicitante.setdescricao(rs.getString("Nome_Funcionario"));
-			solicitante.setstatus(rs.getString("Endereco_Func"));
+			solicitante.setdescricao(rs.getString("Descricao"));
+			solicitante.setstatus(rs.getString("Status"));
 			
 			
 			lista.add(solicitante);
