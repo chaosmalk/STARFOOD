@@ -40,7 +40,7 @@
 	                                		</tr>	
                                 		</thead>
                                 		<tbody>
-                                			<c:forEach items="${listFornecedor}" var="f">
+                                			<c:forEach items="${listFornecedores}" var="f">
 	                                			<tr>
 	                                				<td>${f.razaoSocial}</td>
 	                                				<td>${f.dataCadastro}</td>

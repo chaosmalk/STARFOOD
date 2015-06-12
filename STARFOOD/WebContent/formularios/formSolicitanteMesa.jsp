@@ -37,11 +37,7 @@
                                          </div>
                                         <input type="submit" class="btn btn-default" value="Incluir"/>
                                         <a href="${pageContext.request.contextPath}/Administrador?acao=visualizarMesa" class="btn btn-default">Pesquisar</a>                                                                              
-                                        <button type="reset" class="btn btn-default">Alterar</button>
-                                        <button type="submit" class="btn btn-default">Excluir</button>
-                                        <button type="reset" class="btn btn-default">Pesquisar</button>
-                                        </div>
-                                    </form>
+                                       </form>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
                             </div>

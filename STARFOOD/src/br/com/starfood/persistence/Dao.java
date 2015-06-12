@@ -13,9 +13,9 @@ public class Dao {
 	Statement statement;  
 	ResultSet rs;  
 
-	private final String URL = "jdbc:mysql://localhost:3306/test";  
-	private final String USER = "root";  
-	private final String PASS = "root";  
+	private final String URL = "jdbc:mysql://http://localhost:8080/STARFOOD";  
+	private final String USER = "admin";  
+	private final String PASS = "admin";  
 
 	protected void open()throws Exception{  
 		Class.forName("com.mysql.jdbc.Driver");  

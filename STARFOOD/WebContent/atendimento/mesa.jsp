@@ -18,7 +18,7 @@
 	            <div class="panel-body">
 	                <div class="row">
 	                    <div class="col-lg-12">
-	                        <form role="form" action="Atendimento?acao=abrirMesa" method="post">
+	                        <form role="form" action="Atendimento?acao=abrirPedido" method="post">
 	                            <div class="form-group">
 	                                <label>Mesa</label>
 	                                <label class="radio-inline">

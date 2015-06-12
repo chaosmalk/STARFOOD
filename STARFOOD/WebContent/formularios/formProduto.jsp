@@ -87,8 +87,6 @@
                                        
                                         </div>
                                         <input type="submit" class="btn btn-default" value="Incluir"/>
-                                        <button type="reset" class="btn btn-default">Alterar</button>
-                                        <button type="submit" class="btn btn-default">Excluir</button>
                                         <a href="${pageContext.request.contextPath}/Administrador?acao=visualizarProdutos" class="btn btn-default">Pesquisar</a>
                                     </form>
 									</div>

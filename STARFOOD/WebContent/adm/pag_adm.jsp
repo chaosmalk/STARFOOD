@@ -32,8 +32,9 @@
                                         <a href="${pageContext.request.contextPath}/formularios/formFormaDePagamento.jsp" class="btn btn-default">Formas de Pagamento</a>
                                         <a href="${pageContext.request.contextPath}/formularios/formFuncao.jsp" class="btn btn-default">Cargos</a>
                                                                                                                        
-                                        </div>
+                                       
                                     </form>
+                                     </div>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
                             </div>

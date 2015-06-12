@@ -86,7 +86,7 @@ public class AdministradorServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 			
-			RequestDispatcher view = request.getRequestDispatcher("formularios/listaFornecedores.jsp");  
+			RequestDispatcher view = request.getRequestDispatcher("formularios/listaFornecedor.jsp");  
 		    view.forward(request, response); 
 		}
 		
@@ -101,7 +101,7 @@ public class AdministradorServlet extends HttpServlet {
 					e.printStackTrace();
 				}
 				
-				RequestDispatcher view = request.getRequestDispatcher("formularios/listaSolicitantes.jsp");  
+				RequestDispatcher view = request.getRequestDispatcher("formularios/listaSolicitante.jsp");  
 			    view.forward(request, response); 
 			}
 		
@@ -116,7 +116,7 @@ public class AdministradorServlet extends HttpServlet {
 					e.printStackTrace();
 				}
 				
-				RequestDispatcher view = request.getRequestDispatcher("formularios/listPagamentos.jsp");  
+				RequestDispatcher view = request.getRequestDispatcher("formularios/listaFormaPagamento.jsp");  
 			    view.forward(request, response); 
 			}
 		
@@ -131,7 +131,7 @@ public class AdministradorServlet extends HttpServlet {
 					e.printStackTrace();
 				}
 				
-				RequestDispatcher view = request.getRequestDispatcher("formularios/listCargos.jsp");  
+				RequestDispatcher view = request.getRequestDispatcher("formularios/listaFuncao.jsp");  
 			    view.forward(request, response); 
 			}
 		

@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 /**
  * Servlet implementation class PedidoServlet
  */
@@ -42,7 +43,7 @@ public class AtendimentoServlet extends HttpServlet {
 			try {
 //				FuncionarioDao dao = new FuncionarioDao();
 //				Funcionario funcionario = new Funcionario();
-//				
+//			
 //				funcionario.setId(1);
 //				funcionario.setNomeFuncionario("Teste");
 //				
